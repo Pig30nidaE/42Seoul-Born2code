@@ -1,0 +1,31 @@
+#include "ft_bzero.c"
+#include "ft_calloc.c"
+#include "ft_itoa.c"
+#include "ft_memset.c"
+#include "ft_putchar_fd.c"
+#include "ft_putnbr_fd.c"
+#include "ft_putstr_fd.c"
+#include "ft_split.c"
+#include "ft_strdup.c"
+#include "ft_strlen.c"
+#include "libft.h"
+#include <libc.h>
+#include <limits.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+int	main(void)
+{
+	char **tabstr;
+	int i = 0;
+    if (!(tabstr = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ')))
+        printf("NULL");
+    else
+    {
+        while (tabstr[i] != NULL)
+        {
+            printf("%s\n", tabstr[i]);
+            i++;
+        }
+    }
+}
